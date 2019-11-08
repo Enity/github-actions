@@ -1,15 +1,13 @@
-name: Lint
+name: lint bild
 
 on: [push]
 
 jobs:
   lint:
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
         node-version: [12.x]
-
     steps:
       - uses: actions/checkout@v1
       - name: Use Node.js ${{ matrix.node-version }}
@@ -22,3 +20,10 @@ jobs:
           npm run lint
         env:
           CI: true
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Build the Docker image
+        run: docker build . --file Dockerfile --tag github-actions
