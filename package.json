@@ -1,0 +1,28 @@
+{
+  "name": "github-actions",
+  "version": "1.0.0",
+  "description": "GH actions test",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --es-module-specifier-resolution=node --experimental-modules src/index.js",
+    "lint": "eslint src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Enity/github-actions.git"
+  },
+  "keywords": [],
+  "author": "Vlad Boroda <@enity.w@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Enity/github-actions/issues"
+  },
+  "homepage": "https://github.com/Enity/github-actions#readme",
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2"
+  }
+}
